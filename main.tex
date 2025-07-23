@@ -1,0 +1,214 @@
+% ----------------------------
+% User Info and GitHub links placeholders (add your own)
+% ----------------------------
+% Author: Adnan Bashir
+% GitHub: https://github.com/adbashir
+% LinkedIn: https://linkedin.com/in/adnaanbashir
+% Website: https://www.cs.unm.edu/~abashir/
+% Example project repos (placeholders):
+% - https://github.com/adbashir/DSX_Variable
+% - https://github.com/adbashir/DRUM
+% - https://github.com/adbashir/tsx_llm_state_detection
+
+\documentclass[10pt, letterpaper]{article}
+\pagestyle{empty}
+
+%%% Geometry and page layout %%%
+\usepackage[ignoreheadfoot,top=1.04cm,bottom=0.9cm,left=1cm,right=1cm,footskip=0cm]{geometry}
+
+%%% Fonts and encoding %%%
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+%%% Text formatting and layout %%%
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{calc}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ragged2e}
+\usepackage{enumitem}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+
+%%% Color and hyperrefs %%%
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,urlcolor=black,linkcolor=black,citecolor=black}
+
+%%% PDF accessibility and unicode %%%
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+\fi
+
+%%% PDF metadata %%%
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage[pscoord]{eso-pic}
+
+%%% Icons and symbols %%%
+\usepackage{fontawesome5}
+
+%%% URL handling %%%
+\usepackage{url}
+\def\UrlBreaks{\do\/\do-}
+
+%%% Custom commands and colors %%%
+\definecolor{primaryColor}{RGB}{0,79,144}
+
+\newcommand{\blueExtArrow}{\textsuperscript{\textcolor{primaryColor}{\tiny \faExternalLink*}}}
+
+\newcolumntype{J}{>{\justifying\arraybackslash\setlength{\parindent}{0pt}}X}
+\newcolumntype{L}{>{\centering\arraybackslash}p{2cm}}
+\newcolumntype{R}{>{\RaggedRight\arraybackslash}X}
+
+\newcommand{\edudate}[1]{\hspace{0.6em}#1}
+
+%%% Section formatting %%%
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0cm}
+
+\titleformat{\section}{\vspace{-4pt}\scshape\justifying\large}{}{0em}{}
+  [\color{black}\titlerule \vspace{3pt}]
+\titlespacing{\section}{-1pt}{0.3cm}{0.05cm}
+
+\renewcommand\labelitemi{\textbullet}
+\newenvironment{highlights}{\begin{itemize}[topsep=0.10cm,parsep=0.10cm,partopsep=0pt,itemsep=0pt,leftmargin=0.4cm+10pt]}{\end{itemize}}
+\newenvironment{highlightsforbulletentries}{\begin{itemize}[topsep=0.10cm,parsep=0.10cm,partopsep=0pt,itemsep=0pt,leftmargin=10pt]}{\end{itemize}}
+
+\newenvironment{onecolentry}{\begin{adjustwidth}{0.2cm+0.00001cm}{0.2cm+0.00001cm}}{\end{adjustwidth}}
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill,4.5cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{header}{\setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}}{\par\kern\topsep}
+
+\let\hrefWithoutArrow\href
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\newcommand{\ladpulink}{\href{https://github.com/}{Los Alamos Utility Dataset}}
+\newcommand{\girasollink}{\href{https://github.com/}{Solar Dataset}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{header}
+    {\fontsize{20pt}{20pt}\selectfont \scshape Adnan Bashir}
+\vspace{0.1cm}
+
+    {\color{primaryColor}
+        \small
+        \faMapMarker*~Secaucus, NJ 07094~\textbar{}~
+        \faPhone*~999 999 9999 ~\textbar{}~
+        \faEnvelope~xxxx.xxxx@gmail.com~\textbar{}~
+        \href{https://www.cs.unm.edu/~abashir/}{\textcolor{primaryColor}{\faLink}}~\blueExtArrow~\textbar{}~
+        \href{https://linkedin.com/in/adnaanbashir}{\textcolor{primaryColor}{\faLinkedinIn}}~\blueExtArrow~\textbar{}~
+        \href{https://github.com/adbashir}{\textcolor{primaryColor}{\faGithub}}~\blueExtArrow
+    }
+\end{header}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Education}
+\begin{tabularx}{\textwidth}{@{}L R@{}}
+\edudate{\scshape Aug 2025} & \textbf{Ph.D. Computer Science} -- \textsc{University of New Mexico, USA} \\
+    & Focus: Machine Learning \textbar{} Advisor: \href{https://www.cs.unm.edu/}{Dr. Martin Luther King~\blueExtArrow} \\
+    & Thesis: Unsupervised Learning and Applied LLMs for data stream modeling.  \\[0.5em]
+
+\edudate{\scshape Dec 2015} & \textbf{M.S. Computer Science} -- \textsc{University of New Mexico, USA} \\
+         & Focus: Machine Learning and Data Science \\[0.5em]
+\edudate{\scshape Aug 2012} & \textbf{B.E. Electronics Engineering} -- \textsc{National University of Science \& Technology, Pakistan} \\
+         &  Final Project: Spectrum-aware dynamic channel assignment in cognitive radio networks \\
+\end{tabularx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Selective Work Experience \& Projects}
+\begin{tabularx}{\textwidth}{@{}L@{\hspace{1.2em}}J@{}} 
+
+\edudate{\scshape Aug 2018} & \textbf{Machine Learning Engineer \& Graduate Researcher} \\
+\edudate{\scshape Present} & Data Science Lab -- \textsc{University of New Mexico, USA}\\ [0.3em]
+
+\edudate{\href{https://github.com/}{\textbf{DSX} \blueExtArrow}} &
+\textbf{Designed} and led development of an \textbf{LLM-based state detection framework}, integrating \textbf{foundation models}, \textbf{representation learning}, and \textbf{explainable AI} to identify latent states and generate insights in multivariate streaming data. Enabled new research in \textbf{time-series explainability} and tool adoption. \\[2.7em]
+
+\edudate{\href{https://github.com/}{\textbf{DRUM} \blueExtArrow}} &
+\textbf{Architected} and \textbf{operationalized} DRUM, a robust \textbf{unsupervised learning platform} for \textbf{change point detection} and \textbf{real-time inference} in streaming data. Improved \textbf{regime shift detection}, reduced anomaly response by 30\%, and published results at DAWAK 2023, with ongoing references by peer researchers.\\[2.7em]
+
+\edudate{\href{https://github.com/}{\textbf{TSX} \blueExtArrow}} &
+\textbf{Designed} a production-ready \textbf{SmartGrid analytics solution}, leveraging \textbf{deep learning} and \textbf{predictive analytics} for automated fault detection, event forecasting, and real-time data visualization. Enhanced \textbf{data-driven decision making} and increased grid reliability for infrastructure stakeholders.\\[3.5em]
+
+\edudate{\scshape Apr 2025} & \textbf{Lead Data Steward} \\
+\edudate{\scshape Present} & Department of Workforce Solutions -- \textsc{State of New Mexico, USA}\\ [0.3em]
+
+\edudate{\href{https://github.com/}{\textbf{DRIFT} \blueExtArrow}} & \textbf{Designed and launched} DRIFT, a secure, enterprise-scale data access and orchestration platform, embedding \textbf{real-time anomaly detection}, \textbf{data governance}, and automated \textbf{compliance} enforcement to support high-volume, high-sensitivity data streams for state operations. Led the cross team implementation, standardizing access and monitoring across 10+ business units, streamlining analytics for mission critical workflows, and reducing end-to-end data request turnaround by 40\%. Recognized internally as a catalyst for modernizing statewide data management practices.\\[6.9em]
+
+\edudate{\scshape Dec 2016} & \textbf{\href{https://www.opentech.fund/}{OTF Fellow~\blueExtArrow}} \\
+\edudate{\scshape Dec 2017} & Radio Free Asia -- (\textsc{Open Technology Fund)} \& {\scshape{University of New Mexico, USA}}\\ [0.3em]
+
+\edudate{\href{https://ieeexplore.ieee.org/}{\textbf{Bot-D} \blueExtArrow}} & \textbf{Conducted} and managed large-scale, real-time social media analytics for \textbf{election data integrity}, deploying cutting-edge \textbf{bot detection}, \textbf{anomaly analytics}, and \textbf{automated monitoring} on multi-million tweet datasets. Drove collaboration with election integrity NGOs, producing actionable reports and open datasets that informed policy recommendations and were cited in international academic publications.\\[4.0em]
+
+\edudate{\href{https://github.com/}{\textbf{AV} \blueExtArrow}} & \textbf{Designed} and implemented advanced \textbf{information security} and \textbf{malware detection} models using \textbf{machine learning}, \textbf{statistical modeling}, and \textbf{risk modeling} techniques. Led research on novel web-based attack vectors and collaborated with global cybersecurity partners to deploy countermeasures, ultimately improving detection rates and supporting the development of policy recommendations for transnational security.\\[1.5em]
+
+\end{tabularx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Publications}
+\begin{tabularx}{\textwidth}{@{}L R@{}}
+\edudate{\scshape Aug 2023} & \href{https://link.springer.com/}{Real Time Detection of Regime Shifts in Multivariate Data Streams~\blueExtArrow} -- \href{https://link.springer.com/}{\scshape{\faMapMarker* DAWAK} \blueExtArrow}\\
+
+\edudate{\scshape Apr 2021} & \href{https://www.sciencedirect.com/}{Girasol, a Sky Imaging and Global Solar Irradiance Dataset~\blueExtArrow} -- \href{https://www.sciencedirect.com/}{\scshape{\faMapMarker* Data In Brief} \blueExtArrow}\\
+
+\edudate{\scshape Dec 2020} & \href{https://datadryad.org/}{LADPU Smart Meter Data~\blueExtArrow} -- \href{https://par.nsf.gov/}{\scshape{\faMapMarker* NSF Public Access Repository} \blueExtArrow}\\
+
+\edudate{\scshape Apr 2019} & \href{https://ieeexplore.ieee.org/}{Presidential Elections in Ecuador: Bot Presence in Twitter~\blueExtArrow} -- \href{https://edem-egov.org/}{\scshape{\faMapMarker* ICEDEG} \blueExtArrow}\\
+
+\edudate{\scshape May 2016} & \href{https://ieeexplore.ieee.org/}{Infect-me-not: A user-centric and site-centric study of web-based malware~\blueExtArrow} -- \href{https://networking.ifip.org/}{\scshape{\faMapMarker* IFIP} \blueExtArrow}\\
+
+\edudate{\scshape Oct 2012} & \href{https://ieeexplore.ieee.org/}{Spectrum-aware dynamic channel assignment in cognitive radio networks~\blueExtArrow} -- \href{https://ieeexplore.ieee.org/}{\scshape{\faMapMarker*  ICET} \blueExtArrow}
+\end{tabularx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Skills}
+\begin{tabularx}{\textwidth}{@{}L R@{}}
+\edudate{\scshape Coding} & Python( TensorFlow, PyTorch, CoreFlow, Sklearn), Bash, Scala, \LaTeX \\
+\edudate{\scshape Cloud} & AWS, Databricks, Snowpark \\
+\edudate{\scshape ML-Ops} & CI/CD, Model Monitoring, Automation \\
+\edudate{\scshape Domain} & LLMs, Deep Learning, Unsupervised Models, Streaming Data Analytics
+
+\end{tabularx}
+\end{document}
